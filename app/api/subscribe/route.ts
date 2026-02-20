@@ -12,24 +12,21 @@ export async function POST(req: NextRequest) {
 
     // 1. Send confirmation to the user
     await resend.emails.send({
-      from: 'Nativ <hello@nativ.social>',
+      from: 'Nativ <admin@subroutinelabs.com>',
       to: email,
       subject: "You're on the Nativ waitlist.",
       html: `
-        <div style="font-family: Georgia, serif; max-width: 520px; margin: 0 auto; padding: 40px 24px; color: #1E0F05; background: #F4ECD8;">
-          <p style="font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #B85C2A; margin-bottom: 32px;">nativ.social</p>
+        <div style="font-family: Georgia, serif; max-width: 520px; margin: 0 auto; padding: 40px 24px; color: #0C1E24; background: #E8F0F2;">
+          <p style="font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: #0C7E84; margin-bottom: 32px;">nativ.social</p>
           <h1 style="font-size: 28px; font-weight: 300; line-height: 1.3; margin-bottom: 20px;">
             You're on the list.
           </h1>
-          <p style="font-size: 15px; line-height: 1.8; color: #5C3D1E; margin-bottom: 16px;">
-            We're opening access city by city. You'll hear from us when we're ready for you.
+          <p style="font-size: 15px; line-height: 1.8; color: #2A5560;">
+            Thanks for joining the waitlist. We'll be in touch.
           </p>
-          <p style="font-size: 15px; line-height: 1.8; color: #5C3D1E;">
-            — The Nativ team
-          </p>
-          <hr style="border: none; border-top: 1px solid rgba(100,60,20,0.15); margin: 40px 0;" />
-          <p style="font-size: 11px; color: #9B7A5C;">
-            You signed up at nativ.social. If this wasn't you, ignore this email.
+          <hr style="border: none; border-top: 1px solid rgba(8,70,82,0.13); margin: 40px 0;" />
+          <p style="font-size: 11px; color: #6A969E;">
+            A <a href="https://www.subroutinelabs.com" style="color: #0C7E84; text-decoration: none;">SubroutineLabs</a> product
           </p>
         </div>
       `,
@@ -37,7 +34,7 @@ export async function POST(req: NextRequest) {
 
     // 2. Notify yourself
     await resend.emails.send({
-      from: 'Nativ Waitlist <hello@nativ.social>',
+      from: 'Nativ Waitlist <admin@subroutinelabs.com>',
       to: process.env.NOTIFY_EMAIL || 'hello@nativ.social',
       subject: `New waitlist signup: ${email}`,
       html: `<p>New signup: <strong>${email}</strong></p><p>Time: ${new Date().toISOString()}</p>`,
