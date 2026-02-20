@@ -1,16 +1,44 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { Resend } from 'resend'
+import { createClient } from '@supabase/supabase-js'
 
 export async function POST(req: NextRequest) {
   try {
-    const resend = new Resend(process.env.RESEND_API_KEY)
     const { email } = await req.json()
 
     if (!email || !email.includes('@')) {
       return NextResponse.json({ error: 'Invalid email.' }, { status: 400 })
     }
 
-    // 1. Send confirmation to the user
+    // 1. Initialize Supabase client
+    const supabase = createClient(
+      process.env.SUPABASE_URL || '',
+      process.env.SUPABASE_ANON_KEY || ''
+    )
+
+    // 2. Try to insert email into waitlist table
+    const { error: insertError } = await supabase
+      .from('waitlist')
+      .insert([{ email }])
+
+    // 3. Check if email already exists (duplicate)
+    if (insertError) {
+      if (insertError.code === '23505') {
+        // 23505 is the PostgreSQL unique violation code
+        return NextResponse.json({
+          ok: true,
+          message: "You're already on the waitlist! We'll reach out soon.",
+        })
+      }
+      // Other database errors
+      console.error('Database error:', insertError)
+      return NextResponse.json({ error: 'Failed to subscribe.' }, { status: 500 })
+    }
+
+    // 4. Email inserted successfully, now send confirmation emails
+    const resend = new Resend(process.env.RESEND_API_KEY)
+
+    // Send confirmation to the user
     await resend.emails.send({
       from: 'Nativ <admin@subroutinelabs.com>',
       to: email,
@@ -32,7 +60,7 @@ export async function POST(req: NextRequest) {
       `,
     })
 
-    // 2. Notify yourself
+    // Notify yourself
     await resend.emails.send({
       from: 'Nativ Waitlist <admin@subroutinelabs.com>',
       to: process.env.NOTIFY_EMAIL || 'hello@nativ.social',
@@ -42,7 +70,7 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({ ok: true })
   } catch (err) {
-    console.error('Resend error:', err)
+    console.error('Subscribe error:', err)
     return NextResponse.json({ error: 'Failed to subscribe.' }, { status: 500 })
   }
 }
