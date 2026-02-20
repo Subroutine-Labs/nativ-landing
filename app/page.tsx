@@ -110,7 +110,7 @@ export default function Home() {
       <main>
         <nav>
           <a href="/" className="logo">
-            nativ<span>.</span>social
+            nativ
           </a>
           <div className="nav-right">
             <button className="theme-toggle" onClick={toggle} aria-label="Toggle theme">
@@ -124,39 +124,26 @@ export default function Home() {
 
         {/* Hero */}
         <section className="hero">
-          <p className="hero-eyebrow"><span className="pin-mark" />Local knowledge, finally captured</p>
           <h1 className="hero-title">
-            Travel like you know<br /><em>someone there.</em>
+            nativ<span className="hero-dot">.</span>social
           </h1>
-          <p className="hero-sub">
-            The street vendor worth finding. The actual taxi price. The neighborhood that&apos;s really fine.
-            Real knowledge from locals and travelers who&apos;ve just been — not content optimised for clicks.
-          </p>
+          <p className="hero-tagline"><em>knowledge should compound, not evaporate.</em></p>
           <WaitlistForm />
-          <p className="form-status" style={{ opacity: 0.5, fontSize: '0.72rem', marginTop: '0.6rem' }}>
-            Early access. No spam.
-          </p>
+          <div className="hero-contacts">
+            <a href="https://x.com/Subroutinelabs" target="_blank" rel="noopener noreferrer" className="contact-pill">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              <span>Twitter</span>
+            </a>
+            <a href="mailto:surfer@subroutinelab.com" className="contact-pill" aria-label="Email us">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 4L12 13 2 4"/></svg>
+              <span>Contact</span>
+            </a>
+          </div>
+          <a href="https://www.subroutinelabs.com" target="_blank" rel="noopener noreferrer" className="hero-attribution">A product by SubroutineLabs</a>
         </section>
 
-        {/* Problem */}
         <section className="section">
-          <FadeIn>
-            <p className="section-label">The problem</p>
-            <h2 className="section-title">
-              Hours of searching.<br />
-              <em>Still generic.</em>
-            </h2>
-            <p className="section-body">
-              Before every trip, people mine YouTube, Reddit, Instagram — spending hours to piece together
-              information that&apos;s outdated, inaccurate, or written for an audience of millions.
-              Meanwhile, the people who actually know — the local, the traveler who just got back —
-              share their knowledge once in a comment, or with a friend over drinks, and it evaporates.
-              Instagram and YouTube capture all the value. The people who created it get nothing.
-              The knowledge disappears.
-            </p>
-          </FadeIn>
-
-          <div className="cards" style={{ marginTop: '4rem' }}>
+          <div className="cards">
             {[
               {
                 num: '01',
@@ -182,22 +169,6 @@ export default function Home() {
                 </div>
               </FadeIn>
             ))}
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="cta-section">
-          <div className="cta-inner">
-            <FadeIn>
-              <p className="section-label">Early access</p>
-              <h2 className="cta-title">
-                The real place,<br /><em>not the tourist version.</em>
-              </h2>
-              <p className="cta-sub">
-                We&apos;re opening access city by city. Get on the list.
-              </p>
-              <WaitlistForm />
-            </FadeIn>
           </div>
         </section>
 

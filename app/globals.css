@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Karla:wght@300;400;500&display=swap');
 
 :root {
-  --bg: #F0F6F7;
-  --bg-secondary: #E2EDEF;
+  --bg: #E8F0F2;
+  --bg-secondary: #DAE6E9;
   --surface: #D4E4E6;
   --border: rgba(8, 70, 82, 0.13);
   --text-primary: #0C1E24;
@@ -29,6 +29,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+a { color: inherit; }
 
 html { scroll-behavior: smooth; }
 
@@ -48,11 +49,11 @@ body {
   pointer-events: none;
   z-index: 0;
   opacity: 0.04;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Ccircle cx='400' cy='400' r='380' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='400' cy='400' r='340' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='400' cy='400' r='300' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='400' cy='400' r='260' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='400' cy='400' r='220' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='400' cy='400' r='180' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='400' cy='400' r='140' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='400' cy='400' r='100' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='400' cy='400' r='60' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='150' cy='150' r='130' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='150' cy='150' r='90' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='150' cy='150' r='50' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='650' cy='200' r='160' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='650' cy='200' r='110' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='650' cy='200' r='60' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='100' cy='600' r='120' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='100' cy='600' r='75' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='700' cy='650' r='100' fill='none' stroke='%23206068' stroke-width='1'/%3E%3Ccircle cx='700' cy='650' r='55' fill='none' stroke='%23206068' stroke-width='1'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='800'%3E%3Ccircle cx='400' cy='400' r='380' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='400' cy='400' r='340' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='400' cy='400' r='300' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='400' cy='400' r='260' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='400' cy='400' r='220' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='400' cy='400' r='180' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='400' cy='400' r='140' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='400' cy='400' r='100' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='400' cy='400' r='60' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='150' cy='150' r='130' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='150' cy='150' r='90' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='150' cy='150' r='50' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='650' cy='200' r='160' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='650' cy='200' r='110' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='650' cy='200' r='60' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='100' cy='600' r='120' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='100' cy='600' r='75' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='700' cy='650' r='100' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3Ccircle cx='700' cy='650' r='55' fill='none' stroke='%23206068' stroke-width='1.5'/%3E%3C/svg%3E");
   background-size: 600px 600px;
 }
 
-[data-theme="dark"] .topo-bg { opacity: 0.06; }
+[data-theme="dark"] .topo-bg { opacity: 0.07; }
 
 /* Grain overlay */
 .grain {
@@ -88,8 +89,8 @@ nav {
 
 .logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 700;
   letter-spacing: 0.12em;
   color: var(--text-primary);
   text-decoration: none;
@@ -145,13 +146,13 @@ nav {
 
 /* Hero */
 .hero {
-  min-height: 88vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 6rem 2rem 4rem;
+  padding: 3rem 2rem 2rem;
   position: relative;
 }
 
@@ -169,17 +170,33 @@ nav {
 
 .hero-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3.5rem, 8vw, 7.5rem);
-  font-weight: 300;
+  font-size: clamp(4rem, 10vw, 9rem);
+  font-weight: 600;
   line-height: 1.05;
   color: var(--text-primary);
   max-width: 900px;
-  margin-bottom: 0.3em;
+  margin-bottom: 0.15em;
   opacity: 0;
   animation: fadeUp 0.9s ease 0.2s forwards;
+  letter-spacing: 0.04em;
 }
 
-.hero-title em {
+.hero-dot {
+  color: var(--accent);
+}
+
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.3s forwards;
+  letter-spacing: 0.06em;
+}
+
+.hero-tagline em {
   font-style: italic;
   color: var(--accent);
 }
@@ -251,6 +268,66 @@ nav {
 .form-status.success { color: #5A8A4A; }
 .form-status.error { color: #B84A2A; }
 
+/* Hero contact pills */
+.hero-contacts {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.65s forwards;
+}
+
+.contact-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.contact-pill:visited {
+  color: var(--text-muted);
+}
+
+.contact-pill:hover {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+}
+
+.contact-pill svg {
+  flex-shrink: 0;
+}
+
+.hero-attribution {
+  margin-top: 2.5rem;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.8s forwards;
+  transition: color 0.2s;
+}
+
+.hero-attribution:visited {
+  color: var(--text-muted);
+}
+
+.hero-attribution:hover {
+  color: var(--accent);
+}
+
 /* Divider */
 .section-divider {
   width: 40px;
@@ -260,9 +337,9 @@ nav {
   opacity: 0.4;
 }
 
-/* Problem section */
+/* Cards section */
 .section {
-  padding: 6rem 2rem;
+  padding: 0 2rem 6rem;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -388,7 +465,13 @@ footer {
   color: var(--text-muted);
   letter-spacing: 0.05em;
 }
-
+.footer-link {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-link:hover {
+  color: var(--text);
+}
 /* Pin marker decoration */
 .pin-mark {
   display: inline-block;
@@ -427,5 +510,6 @@ footer {
   .waitlist-form { flex-direction: column; }
   .waitlist-form input { border-right: 1px solid var(--border); border-bottom: none; border-radius: 4px 4px 0 0; }
   .waitlist-form button { border-radius: 0 0 4px 4px; }
+  .hero-contacts { flex-direction: column; align-items: center; }
   footer { flex-direction: column; gap: 0.5rem; text-align: center; }
 }
