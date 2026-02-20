@@ -40,7 +40,7 @@ function WaitlistForm({ className }: { className?: string }) {
       const data = await res.json()
       if (res.ok) {
         setStatus('success')
-        setMessage("You're on the list.")
+        setMessage(data.message || "You're on the list.")
         setEmail('')
       } else {
         setStatus('error')
@@ -126,7 +126,7 @@ export default function Home() {
           <h1 className="hero-title">
             nativ<span className="hero-dot">.</span>social
           </h1>
-          <p className="hero-tagline"><em>knowledge should compound, not evaporate.</em></p>
+          <p className="hero-tagline"><em>knowledge should compound, not evaporate</em></p>
           <WaitlistForm />
           <div className="hero-contacts">
             <a href="https://x.com/NativSocial" target="_blank" rel="noopener noreferrer" className="contact-pill">
