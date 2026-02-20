@@ -7,8 +7,7 @@ function useTheme() {
 
   useEffect(() => {
     const saved = localStorage.getItem('nativ-theme') as 'light' | 'dark' | null
-    const preferred = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-    const initial = saved || preferred
+    const initial = saved || 'light'
     setTheme(initial)
     document.documentElement.setAttribute('data-theme', initial)
   }, [])
