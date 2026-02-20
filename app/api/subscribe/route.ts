@@ -10,14 +10,6 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Invalid email.' }, { status: 400 })
     }
 
-    // 0. Save contact to Resend audience
-    if (process.env.RESEND_AUDIENCE_ID) {
-      await resend.contacts.create({
-        email,
-        audienceId: process.env.RESEND_AUDIENCE_ID,
-      })
-    }
-
     // 1. Send confirmation to the user
     await resend.emails.send({
       from: 'Nativ <admin@subroutinelabs.com>',
