@@ -138,7 +138,7 @@ export default function Home() {
               <span>Contact</span>
             </a>
           </div>
-          <a href="https://www.subroutinelabs.com" target="_blank" rel="noopener noreferrer" className="hero-attribution">A product by SubroutineLabs</a>
+          <a href="https://www.subroutinelabs.com" target="_blank" rel="noopener noreferrer" className="hero-attribution">A product by Subroutine Labs</a>
         </section>
 
         <section className="section">
@@ -147,17 +147,17 @@ export default function Home() {
               {
                 num: '01',
                 title: 'Locals share what they know',
-                body: 'The street with the best food at 11pm. Which neighbourhoods are genuinely safe. The price you should actually pay. Structured, searchable, attributed to people who were actually there.',
+                body: 'The street with the best food at 11 p.m. Which neighbourhoods are genuinely safe. The price you should actually pay. Structured, searchable, attributed to people who were actually there.',
               },
               {
                 num: '02',
-                title: 'Travellers get what they need',
-                body: 'Not a curated feed of what performed well. Specific answers to specific questions — ranked by recency and reliability, not by engagement metrics.',
+                title: 'People get what they need',
+                body: 'Not a curated feed of what performed well. Knowledge that\'s useful right now, ranked by recency, reliability, and usability.',
               },
               {
                 num: '03',
                 title: 'Knowledge doesn\'t evaporate',
-                body: 'The person who lived in Lisbon for three years and knows every shortcut — that knowledge has a place to live, and gets properly attributed to the person who built it.',
+                body: 'Someone figured out the shortcut that saves twenty minutes, the place that\'s actually worth it, the thing everyone wishes they knew sooner. That knowledge exists — but it\'s trapped in their head or lost in a chat. Nativ gives it a place to live, grow, and compound.',
               },
             ].map((c, i) => (
               <FadeIn key={c.num} delay={i * 100}>

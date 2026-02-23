@@ -317,7 +317,8 @@ nav {
   text-decoration: none;
   opacity: 0;
   animation: fadeUp 0.9s ease 0.8s forwards;
-  transition: color 0.2s;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 1px solid transparent;
 }
 
 .hero-attribution:visited {
@@ -326,6 +327,7 @@ nav {
 
 .hero-attribution:hover {
   color: var(--accent);
+  border-bottom: 1px solid var(--accent);
 }
 
 /* Divider */
@@ -385,7 +387,10 @@ nav {
 
 .card {
   background: var(--bg);
-  padding: 2.5rem 2rem;
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   transition: background 0.2s;
 }
 
@@ -414,6 +419,7 @@ nav {
   font-weight: 300;
   color: var(--text-secondary);
   line-height: 1.7;
+  flex: 1;
 }
 
 /* CTA section */

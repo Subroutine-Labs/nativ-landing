@@ -56,7 +56,7 @@ export async function POST(req: NextRequest) {
           </p>
           <hr style="border: none; border-top: 1px solid rgba(8,70,82,0.13); margin: 40px 0;" />
           <p style="font-size: 11px; color: #6A969E;">
-            A <a href="https://www.subroutinelabs.com" style="color: #0C7E84; text-decoration: none;">SubroutineLabs</a> product
+            A <a href="https://www.subroutinelabs.com" style="color: #0C7E84; text-decoration: none;">Subroutine Labs</a> product
           </p>
         </div>
       `,
