@@ -173,6 +173,7 @@ export default function Home() {
 
         <footer>
           <span className="footer-text">© {new Date().getFullYear()} Nativ Social, Inc.</span>
+          <a href="/privacy" className="footer-text footer-link">Privacy Policy</a>
           <span className="footer-text" style={{ letterSpacing: '0.15em' }}>nativ.social</span>
         </footer>
       </main>

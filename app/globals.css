@@ -509,6 +509,125 @@ footer {
   transform: none;
 }
 
+/* Privacy page */
+.privacy {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 4rem 2rem 6rem;
+}
+
+.privacy h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.privacy-updated {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.03em;
+}
+
+.privacy h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.privacy h3 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.privacy p {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.privacy ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.privacy ul li {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  padding-left: 1.2rem;
+  position: relative;
+}
+
+.privacy ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.5;
+}
+
+.privacy strong {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.privacy a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.privacy a:hover {
+  border-bottom: 1px solid var(--accent);
+}
+
+.privacy-table-wrap {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.privacy table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.privacy th {
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-primary);
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.privacy td {
+  padding: 0.75rem 1rem;
+  color: var(--text-secondary);
+  font-weight: 300;
+  border-bottom: 1px solid var(--border);
+  line-height: 1.6;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   nav { padding: 1.2rem 1.5rem; }
@@ -518,4 +637,5 @@ footer {
   .waitlist-form button { border-radius: 0 0 4px 4px; }
   .hero-contacts { flex-direction: column; align-items: center; }
   footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .privacy { padding: 2.5rem 1.5rem 4rem; }
 }
