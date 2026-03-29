@@ -172,8 +172,12 @@ export default function Home() {
         </section>
 
         <footer>
-          <span className="footer-text">© {new Date().getFullYear()} Nativ Social, Inc.</span>
-          <a href="/privacy" className="footer-text footer-link">Privacy Policy</a>
+          <span className="footer-text">&copy; {new Date().getFullYear()} Nativ Social, Inc.</span>
+          <div className="footer-links">
+            <a href="/terms" className="footer-text footer-link">Terms of Use</a>
+            <a href="/privacy" className="footer-text footer-link">Privacy Policy</a>
+            <a href="/guidelines" className="footer-text footer-link">Guidelines</a>
+          </div>
           <span className="footer-text" style={{ letterSpacing: '0.15em' }}>nativ.social</span>
         </footer>
       </main>

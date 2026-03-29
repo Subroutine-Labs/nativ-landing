@@ -29,6 +29,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+a { color: inherit; }
 
 html { scroll-behavior: smooth; }
 
@@ -184,6 +185,26 @@ nav {
   color: var(--accent);
 }
 
+.hero-dot {
+  color: var(--accent);
+}
+
+.hero-tagline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.3s forwards;
+  letter-spacing: 0.06em;
+}
+
+.hero-tagline em {
+  font-style: italic;
+  color: var(--accent);
+}
+
 .hero-sub {
   font-size: 1.05rem;
   font-weight: 300;
@@ -250,6 +271,59 @@ nav {
 
 .form-status.success { color: #5A8A4A; }
 .form-status.error { color: #B84A2A; }
+
+/* Hero contact pills */
+.hero-contacts {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.65s forwards;
+}
+
+.contact-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: all 0.25s ease;
+}
+
+.contact-pill:visited { color: var(--text-muted); }
+.contact-pill:hover {
+  color: var(--text-primary);
+  border-color: var(--accent);
+  background: var(--accent-subtle);
+}
+.contact-pill svg { flex-shrink: 0; }
+
+.hero-attribution {
+  margin-top: 2.5rem;
+  font-size: 0.72rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.8s forwards;
+  transition: color 0.2s, border-bottom 0.2s;
+  border-bottom: 1px solid transparent;
+}
+
+.hero-attribution:visited { color: var(--text-muted); }
+.hero-attribution:hover {
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
 
 /* Divider */
 .section-divider {
@@ -387,6 +461,20 @@ footer {
   font-size: 0.75rem;
   color: var(--text-muted);
   letter-spacing: 0.05em;
+}
+
+.footer-link {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--accent);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1.5rem;
 }
 
 /* Pin marker decoration */
