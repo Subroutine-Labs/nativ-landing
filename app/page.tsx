@@ -126,7 +126,7 @@ export default function Home() {
           <h1 className="hero-title">
             nativ<span className="hero-dot">.</span>social
           </h1>
-          <p className="hero-tagline"><em>knowledge should compound, not evaporate</em></p>
+          <p className="hero-tagline"><em>talk to travelers around you</em></p>
           <WaitlistForm />
           <div className="hero-contacts">
             <a href="https://x.com/NativSocial" target="_blank" rel="noopener noreferrer" className="contact-pill">
@@ -146,18 +146,18 @@ export default function Home() {
             {[
               {
                 num: '01',
-                title: 'Locals share what they know',
-                body: 'The street with the best food at 11 p.m. Which neighbourhoods are genuinely safe. The price you should actually pay. Structured, searchable, attributed to people who were actually there.',
+                title: 'Same place, no shared space',
+                body: 'Travelers, locals, and regulars move through the same streets every day. Some have useful knowledge. Some want company. Most would get along if they ever crossed paths. They never will — because there\'s no shared space to talk.',
               },
               {
                 num: '02',
-                title: 'People get what they need',
-                body: 'Not a curated feed of what performed well. Knowledge that\'s useful right now, ranked by recency, reliability, and usability.',
+                title: 'A live feed of people nearby',
+                body: 'Open Nativ and see short messages from people around you. Someone found great food. Someone got scammed. Someone wants dinner company. You read it. You reply. You drop your own. The feed is the conversation.',
               },
               {
                 num: '03',
-                title: 'Knowledge doesn\'t evaporate',
-                body: 'Someone figured out the shortcut that saves twenty minutes, the place that\'s actually worth it, the thing everyone wishes they knew sooner. That knowledge exists — but it\'s trapped in their head or lost in a chat. Nativ gives it a place to live, grow, and compound.',
+                title: 'Connections that start in person',
+                body: 'Tap a pulse, reply to it, start a thread. Send a message request if you want to keep talking. You met in Colaba — you can keep the conversation going from anywhere in the world.',
               },
             ].map((c, i) => (
               <FadeIn key={c.num} delay={i * 100}>

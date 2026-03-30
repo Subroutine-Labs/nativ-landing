@@ -3,10 +3,10 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'nativ.social',
-  description: 'knowledge should compound, not evaporate',
+  description: 'talk to travelers around you',
   openGraph: {
     title: 'nativ.social',
-    description: 'knowledge should compound, not evaporate',
+    description: 'talk to travelers around you',
     url: 'https://nativ.social',
     siteName: 'Nativ',
     type: 'website',
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'nativ.social',
-    description: 'knowledge should compound, not evaporate',
+    description: 'talk to travelers around you',
   },
 }
 
